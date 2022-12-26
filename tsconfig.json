@@ -1,0 +1,11 @@
+{
+    "buildOptions": {
+
+    },
+    "compilerOptions": {
+        "declaration": true,
+        "allowJs": true,
+        "checkJs": false,
+        "lib": [ "es2015", "DOM" ]
+    }
+}
