@@ -1,10 +1,15 @@
 {
   "name": "nlp-bot-context",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "bot context (for conversatio) with nlp.js",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ghifar1/nlp-bot-context.git"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json"
   },
   "keywords": [
     "bot-context",

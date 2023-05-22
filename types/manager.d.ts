@@ -34,10 +34,10 @@ type ProcessResponse = {
     srcAnswer: string;
     answer: string;
 };
-interface NlpManager {
+export interface NlpManager {
     addDocument(language: string, question: string, className: string): void;
     addAnswer(language: string, className: string, response: string): void;
     process(language: string, question: string): Promise<ProcessResponse>;
     train(): Promise<void>;
 }
-export { NlpManager };
+export {};

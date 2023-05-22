@@ -9,7 +9,7 @@ export class NlpContext<T> {
     identifierArray: Array<Identifier>
 
     constructor(dataConstruct: T) {
-        this.nlp = new NLP.NlpManager({ languages: ['en'] })
+        this.nlp = new NLP.NlpManager({ languages: ['id', 'en'] })
         this.questionArray = []
         this.responseArray = []
         this.identifierArray = []

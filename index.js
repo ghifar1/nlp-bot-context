@@ -40,7 +40,7 @@ exports.NlpContext = void 0;
 var NLP = require("node-nlp");
 var NlpContext = /** @class */ (function () {
     function NlpContext(dataConstruct) {
-        this.nlp = new NLP.NlpManager({ languages: ['en'] });
+        this.nlp = new NLP.NlpManager({ languages: ['id', 'en'] });
         this.questionArray = [];
         this.responseArray = [];
         this.identifierArray = [];

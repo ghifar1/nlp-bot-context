@@ -6,6 +6,9 @@
         "allowJs": true,
         "checkJs": false
     },
+    "include": [
+        "index.ts"
+    ],
     "exclude": [
         "test/**/*",
         "types/**/*"
