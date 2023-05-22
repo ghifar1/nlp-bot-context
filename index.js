@@ -35,7 +35,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NlpContext = void 0;
 var NLP = require("node-nlp");
 var NlpContext = /** @class */ (function () {
     function NlpContext(dataConstruct) {
@@ -169,33 +170,4 @@ var NlpContext = /** @class */ (function () {
     };
     return NlpContext;
 }());
-function wow() {
-    return __awaiter(this, void 0, void 0, function () {
-        var test;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    test = new NlpContext({
-                        id: "",
-                        message: ""
-                    });
-                    test.addInput('en', 'good morning!', 'greetings.morning');
-                    test.addInput('en', 'morning', 'greetings.morning');
-                    test.addInput('en', 'good afternoon!', 'greetings.afternoon');
-                    test.addInput('en', 'afternoon', 'greetings.afternoon');
-                    test.addResponse('en', 'greetings.morning', function (_a) {
-                        var id = _a.id, message = _a.message;
-                        console.log("YOU DID IT ", message);
-                    });
-                    return [4 /*yield*/, test.init()];
-                case 1:
-                    _a.sent();
-                    return [4 /*yield*/, test.process('en', 'go', 'morning', { id: "", message: "hello" })];
-                case 2:
-                    _a.sent();
-                    return [2 /*return*/];
-            }
-        });
-    });
-}
-wow();
+exports.NlpContext = NlpContext;

@@ -1,6 +1,8 @@
 import * as NLP from "node-nlp"
+import { Identifier, QuestionArray, ResponseArray } from "./types/NlpContextMember"
+import { NlpManager } from "./types/manager"
 
-class NlpContext<T> {
+export class NlpContext<T> {
     nlp: NlpManager
     questionArray: Array<QuestionArray>
     responseArray: Array<ResponseArray<T>>
@@ -123,26 +125,3 @@ class NlpContext<T> {
         identifierIndex.needAnswer = needAnswer
     }
 }
-
-
-async function wow() {
-    const test = new NlpContext({
-        id: "",
-        message: ""
-    })
-
-    test.addInput('en', 'good morning!', 'greetings.morning')
-    test.addInput('en', 'morning', 'greetings.morning')
-    test.addInput('en', 'good afternoon!', 'greetings.afternoon')
-    test.addInput('en', 'afternoon', 'greetings.afternoon')
-
-    test.addResponse('en', 'greetings.morning', ({ id, message }) => {
-        console.log("YOU DID IT ", message)
-    })
-
-
-    await test.init()
-    await test.process('en', 'go', 'morning', { id: "", message: "hello" })
-}
-
-wow()

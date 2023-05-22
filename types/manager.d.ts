@@ -40,3 +40,4 @@ interface NlpManager {
     process(language: string, question: string): Promise<ProcessResponse>;
     train(): Promise<void>;
 }
+export { NlpManager };

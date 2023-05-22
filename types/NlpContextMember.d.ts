@@ -13,3 +13,4 @@ type Identifier = {
     state: string;
     needAnswer: boolean;
 };
+export { QuestionArray, ResponseArray, Identifier };
